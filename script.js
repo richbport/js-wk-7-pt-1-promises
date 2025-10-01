@@ -1,8 +1,9 @@
 // console.log(fetch('https://jsonplaceholder.typicode.com/users/1'))
 
 async function main() {
-    const response = await (fetch('https://jsonplaceholder.typicode.com/users/1'));
-    console.log(response);
+    const response = await (fetch('https://jsonplaceholder.typicode.com/users/1')); // Fetch the data from an API
+    const data =  await response.json() // parse the JSON data
+    console.log(data); // console.log the result
 }
 
-main();
+main(); // Call the function
