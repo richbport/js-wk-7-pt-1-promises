@@ -16,4 +16,11 @@ async function main() {
     if (!response.ok) {
         throw new Error(`HTTP error! Status ${response.status}`);
     }
+
+    const data = await response.json();
+    console.log("User Data", data);
+} catch (error) {
+    console.error("Error occured while fetching data:", error.message);
 }
+
+main();
