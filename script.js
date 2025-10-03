@@ -60,5 +60,7 @@ async function getCookie() {
   try {
     let cookie = await askMomForCookie()
     console.log(cookie)
+  } catch(error) {
+    console.log(error)
   }
 }
