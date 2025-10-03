@@ -5,6 +5,12 @@ async function main() {
     const response = await fetch(
       "https://jsonplaceholder.typicode.com/users/1"
     );
+
+    // Check if the response is successful
+    if (!response.ok) { // Checks the HTTP response status
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    
     const data = await response.json();
     console.log(data);
   } catch (error) {
