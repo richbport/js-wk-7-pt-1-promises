@@ -39,6 +39,20 @@
 
 // main();
 
-function askMomForCookie () {
-    return new Promise()
+function askMomForCookie() {
+  return new Promise((resolve, reject) => {
+    console.log("Mom, can I have a cookie?");
+
+    setTimeout(() => {
+        let momSaysYes = Math.random() > 0.3
+
+        if(momSaysYes) {
+            resolve("Yes, here's your cookie!")
+        } else {
+          reject("No cookie for you!")
+        }
+    }, 2000);
+  });
 }
+
+console.log(Math.random())
