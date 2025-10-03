@@ -1,24 +1,24 @@
 // console.log(fetch('https://jsonplaceholder.typicode.com/users/1'))
 
-async function main() {
-  try {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/users/1"
-    );
+// async function main() {
+//   try {
+//     const response = await fetch(
+//       "https://jsonplaceholder.typicode.com/users/1"
+//     );
 
-    // Check if the response is successful
-    if (!response.ok) { // Checks the HTTP response status
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error("This is the error ->", error.message);
-  }
-}
+//     // Check if the response is successful
+//     if (!response.ok) { // Checks the HTTP response status
+//         throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
 
-main();
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.error("This is the error ->", error.message);
+//   }
+// }
+
+// main();
 
 // async function main() {
 //   try {
@@ -38,3 +38,7 @@ main();
 // }
 
 // main();
+
+function askMomForCookie () {
+    return new Promise()
+}
