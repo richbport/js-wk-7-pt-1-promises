@@ -55,4 +55,6 @@ function askMomForCookie() {
   });
 }
 
-console.log(Math.random())
+async function getCookie() {
+  console.log("Waiting for Mom to decide")
+}
