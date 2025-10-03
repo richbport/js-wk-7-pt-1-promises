@@ -1,16 +1,18 @@
 // console.log(fetch('https://jsonplaceholder.typicode.com/users/1'))
 
 async function main() {
-    try {
-        const response = await (fetch('https://jsonplaceholder.typicode.com/users/1'));
-        const data =  await response.json() 
-        console.log(data); 
-    } catch (error) {
-        
-    }
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/users/1"
+    );
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("This is the error ->", error.message);
+  }
 }
 
-main(); 
+main();
 
 // async function main() {
 //   try {
