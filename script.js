@@ -57,4 +57,8 @@ function askMomForCookie() {
 
 async function getCookie() {
   console.log("Waiting for Mom to decide")
+  try {
+    let cookie = await askMomForCookie()
+    console.log(cookie)
+  }
 }
