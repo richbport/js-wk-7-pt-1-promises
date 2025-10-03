@@ -41,7 +41,7 @@
 
 function askMomForCookie() {
   return new Promise((resolve, reject) => {
-    console.log("Mom, can I have a cookie?");
+    console.log("Waiting for Mom to decide");
 
     setTimeout(() => {
         let momSaysYes = Math.random() > 0.3
@@ -56,11 +56,13 @@ function askMomForCookie() {
 }
 
 async function getCookie() {
-  console.log("Waiting for Mom to decide")
+  console.log("Mom, can I have a cookie?");
   try {
     let cookie = await askMomForCookie()
-    console.log(cookie)
+    console.log(cookie) // If Mom says yes
   } catch(error) {
-    console.log(error)
+    console.log(error) // If Mom says no
   }
 }
+
+getCookie()
