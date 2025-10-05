@@ -71,4 +71,6 @@ function isValidEmail(email) {
   return email.includes("@") && email.includes(".");
 }
 
-console.log(isValidEmail('rich@yahoocom'))
+console.log(isValidEmail('rich@yahoocom'));
+console.log(isValidEmail('richyahoo.com'));
+console.log(isValidEmail('rich@yahoo.com'));
