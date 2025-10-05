@@ -39,30 +39,36 @@
 
 // main();
 
-function askMomForCookie() {
-  return new Promise((resolve, reject) => {
-    console.log("Waiting for Mom to decide ⌛");
+// function askMomForCookie() {
+//   return new Promise((resolve, reject) => {
+//     console.log("Waiting for Mom to decide ⌛");
 
-    setTimeout(() => {
-        let momSaysYes = Math.random() > 0.3
+//     setTimeout(() => {
+//         let momSaysYes = Math.random() > 0.3
 
-        if(momSaysYes) {
-            resolve("Yes, here's your cookie! 🍪")
-        } else {
-          reject("No cookie for you! ❌")
-        }
-    }, 2000);
-  });
+//         if(momSaysYes) {
+//             resolve("Yes, here's your cookie! 🍪")
+//         } else {
+//           reject("No cookie for you! ❌")
+//         }
+//     }, 2000);
+//   });
+// }
+
+// async function getCookie() {
+//   console.log("Mom, can I have a cookie?");
+//   try {
+//     let cookie = await askMomForCookie()
+//     console.log(cookie) // If Mom says yes
+//   } catch(error) {
+//     console.log(error) // If Mom says no
+//   }
+// }
+
+// getCookie()
+
+function isValidEmail(email) {
+  return email.includes("@") && email.includes(".");
 }
 
-async function getCookie() {
-  console.log("Mom, can I have a cookie?");
-  try {
-    let cookie = await askMomForCookie()
-    console.log(cookie) // If Mom says yes
-  } catch(error) {
-    console.log(error) // If Mom says no
-  }
-}
-
-getCookie()
+console.log(isValidEmail('rich@yahoocom'))
