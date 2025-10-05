@@ -41,15 +41,15 @@
 
 function askMomForCookie() {
   return new Promise((resolve, reject) => {
-    console.log("Waiting for Mom to decide");
+    console.log("Waiting for Mom to decide ⌛");
 
     setTimeout(() => {
         let momSaysYes = Math.random() > 0.3
 
         if(momSaysYes) {
-            resolve("Yes, here's your cookie!")
+            resolve("Yes, here's your cookie! 🍪")
         } else {
-          reject("No cookie for you!")
+          reject("No cookie for you! ❌")
         }
     }, 2000);
   });
